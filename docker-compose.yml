@@ -14,7 +14,7 @@ services:
     volumes:
       - "./config:/config"
       - mediacentervolume:/downloads
-      - mediacentervolume:/downloads
+      - mediacentervolume:/watch
     env_file: 
       - ./common.env
     network_mode: "host"
