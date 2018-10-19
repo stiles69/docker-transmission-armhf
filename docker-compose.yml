@@ -6,19 +6,15 @@ services:
       context: .
       dockerfile: Dockerfile
     image: stiles/docker-transmission-armhf
-    container_name: transmission_container
+    container_name: transmission_container_compose
     restart: always
     ports:
       - '9091:9091'
       - '52309:52309'
     volumes:
       - "./config:/config"
-      - mediacentervolume:/downloads
-      - mediacentervolume:/watch
+      - /torrents:/downloads
+      - /torrents:/watch
     env_file: 
       - ./common.env
     network_mode: "host"
-
-volumes:
-  mediacentervolume:
-    external: true

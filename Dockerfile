@@ -22,8 +22,8 @@ RUN \
 
 # copy local files
 COPY root/ /
+COPY bin/ /bin
 
 # ports and volumes
-EXPOSE 9091 51209
+EXPOSE 9091
 VOLUME /config /downloads /watch
-VOLUME /mediacentervolume
