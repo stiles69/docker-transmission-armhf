@@ -22,7 +22,6 @@ RUN \
 
 # copy local files
 COPY root/ /
-COPY bin/ /bin
 
 # ports and volumes
 EXPOSE 9091

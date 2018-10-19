@@ -2,19 +2,20 @@ version: '2'
 
 services:
   transmission:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: stiles/docker-transmission-armhf
+          #    build:
+          #      context: .
+          #      dockerfile: Dockerfile
+    image: lsioarmhf/transmission
     container_name: transmission_container_compose
     restart: always
     ports:
       - '9091:9091'
-      - '52309:52309'
+      - '51413:51413'
+      - '51413:51413/udp'
     volumes:
       - "./config:/config"
-      - /torrents:/downloads
-      - /torrents:/watch
+      - "/torrents:/downloads"
+      - "/torrents:/watch"
     env_file: 
       - ./common.env
     network_mode: "host"
