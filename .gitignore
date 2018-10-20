@@ -1,0 +1,3 @@
+# Dont send common.env.
+common.env*
+*common.env*

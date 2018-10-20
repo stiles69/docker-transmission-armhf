@@ -15,7 +15,8 @@ services:
     volumes:
       - "./config:/config"
       - "/torrents:/downloads"
-      - "/torrents:/watch"
+      - "/torrents/watch:/downloads/watch"
+      - "/torrents/scripts:/downloads/scripts"  
     env_file: 
       - ./common.env
     network_mode: "host"
